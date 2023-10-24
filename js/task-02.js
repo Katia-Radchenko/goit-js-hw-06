@@ -9,12 +9,13 @@ const ingredients = [
 
 const ingredientsById = document.getElementById('ingredients');
 
-ingredients.map(item => {
+const ingredientsEl = ingredients.map(item => {
     const addListEl = document.createElement('li')
     addListEl.textContent = item
     addListEl.classList.add('item')
-    ingredientsById.append(addListEl)
     console.log(addListEl)
+    return addListEl
 })
+ingredientsById.append(...ingredientsEl)
 
 
